@@ -25,7 +25,7 @@ export default function Card() {
   ];
   return (
     <View style={styles.card}>
-        <Text>Título do Filme</Text>
+        <Text style={styles.title}>Título do Filme</Text>
         {/* <FlatList data={movies} renderItem={({ item }) => <Text>{item.titulo} {item.lançamento}</Text>} /> */}
         <Button style={styles.deleteButton} title="Deletar"/>
     </View>
@@ -34,7 +34,17 @@ export default function Card() {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'yellow',
+    flexDirection: "column",
+    justifyContent: "space-between",
+    backgroundColor: 'white',
+    height: 100,
+    width: 200,
+  },
+  title: {
+    fontWeight: "bold",
+    textAlign: "center",
+    padding: 5,
+    backgroundColor: "gray"
   },
   deleteButton: {
     color: "black"
